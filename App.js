@@ -46,179 +46,138 @@ const styleCard={
 };
 
 
-const resobj={
-    
-
-          "info": {
-          "id": "42060",
-          "name": "Sharief Bhai Biryani",
-          "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/26/5cd5044e-8760-43f5-ab87-475bcd1ced08_42060.jpg",
-          "locality": "Koramangala",
-          "areaName": "Koramangala",
-          "costForTwo": "₹400 for two",
-          "cuisines": [
-            "Biryani",
-            "Kebabs",
-            "Mughlai",
-            "Arabian",
-            "South Indian",
-            "Rolls & Wraps",
-            "Street Food",
-            "Fast Food",
-            "Desserts",
-            "Beverages"
-          ],
-          "avgRating": 4.2,
-          "parentId": "469102",
-          "avgRatingString": "4.2",
-          "totalRatingsString": "51K+",
-          "sla": {
-            "deliveryTime": 26,
-            "lastMileTravel": 2.3,
-            "serviceability": "SERVICEABLE",
-            "slaString": "25-30 mins",
-            "lastMileTravelString": "2.3 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2024-09-06 03:00:00",
-            "opened": true
-          },
-          "badges": {
-            "imageBadges": [
-              {
-                "imageId": "Rxawards/_CATEGORY-Biryani.png",
-                "description": "Delivery!"
-              }
-            ]
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "imageBased": {
-                "badgeObject": [
-                  {
-                    "attributes": {
-                      "description": "Delivery!",
-                      "imageId": "Rxawards/_CATEGORY-Biryani.png"
-                    }
+const resobj = {
+    "type": "restaurant",
+    "data": {
+      "info": {
+        "id": "5934",
+        "name": "Burger King",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/7f76a072-c1bc-4d74-ac56-33e0eea20c1e_5934.JPG",
+        "locality": "Koramangala",
+        "areaName": "Koramangala",
+        "costForTwo": "₹350 for two",
+        "cuisines": [
+          "Burgers",
+          "American"
+        ],
+        "avgRating": 4.3,
+        "parentId": "166",
+        "avgRatingString": "4.3",
+        "totalRatingsString": "99K+",
+        "sla": {
+          "deliveryTime": 24,
+          "lastMileTravel": 1.4,
+          "serviceability": "SERVICEABLE",
+          "slaString": "20-25 mins",
+          "lastMileTravelString": "1.4 km",
+          "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+          "nextCloseTime": "2024-09-06 06:55:00",
+          "opened": true
+        },
+        "badges": {
+          "imageBadges": [
+            {
+              "imageId": "Green_Dot_Awards/Best_In_Veg_Burger.png",
+              "description": "Delivery!"
+            },
+            {
+              "imageId": "Rxawards/CATEGORY-Burger.png",
+              "description": "Delivery!"
+            }
+          ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+          "entityBadges": {
+            "imageBased": {
+              "badgeObject": [
+                {
+                  "attributes": {
+                    "description": "Delivery!",
+                    "imageId": "Green_Dot_Awards/Best_In_Veg_Burger.png"
                   }
-                ]
-              },
-              "textBased": {
-                
-              },
-              "textExtendedBadges": {
-                
-              }
+                },
+                {
+                  "attributes": {
+                    "description": "Delivery!",
+                    "imageId": "Rxawards/CATEGORY-Burger.png"
+                  }
+                }
+              ]
             }
-          },
-          "aggregatedDiscountInfoV3": {
-            "header": "ITEMS",
-            "subHeader": "AT ₹199",
-            "discountCalloutInfo": {
-              "message": "Free Delivery",
-              "logoCtx": {
-                "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-              }
-            }
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          },
-          "externalRatings": {
-            "aggregatedRating": {
-              "rating": "4.0",
-              "ratingCount": "4.5K+"
-            },
-            "source": "GOOGLE",
-            "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-          },
-          "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+          }
         },
-        "analytics": {
-          "context": "seo-data-ffcd306f-f0cf-41de-85ae-7363af7e0721"
+        "aggregatedDiscountInfoV3": {
+          "header": "ITEMS",
+          "subHeader": "AT ₹99"
         },
-        "cta": {
-          "link": "https://www.swiggy.com/city/bangalore/sharief-bhai-biryani-koramangala-rest42060",
-          "text": "RESTAURANT_MENU",
-          "type": "WEBLINK"
+        "externalRatings": {
+          "aggregatedRating": {
+            "rating": "4.2",
+            "ratingCount": "3.9K+"
+          },
+          "source": "GOOGLE",
+          "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
         },
-        "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-    
-      };
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+      },
+      "cta": {
+        "link": "https://www.swiggy.com/city/bangalore/burger-king-koramangala-rest5934",
+        "type": "WEBLINK"
+      }
+    }
+  };
+  
+
+
+          
 
 
 const RestaurantCard=(props)=>{
     const {resdata}=props;
+    const priceOfTwo = Number(resdata.data.info.costForTwo.replace(/[^0-9.-]+/g,""))
+    const{
+        cloudinaryImageId,
+        name,
+        avgRating,
+        cuisines,
+        deliveryTime,
+
+    }=resdata?.data;
     return(
         <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
             <img  className="resta-logo" 
             alt="res-logo"
-             src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f2991ba122f8d883cd5ba0e705f86b87"/>
-            <h3>{resdata.resName}</h3>
-            <h4>{resdata.cuisin}</h4>
-            <h4>{resdata.star}</h4>
-            <h4>{resdata.time}</h4>  
+             src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/87e56c63-b521-4257-96ae-a42229b92009_10576.jpg"/>
+            <h3>{name}</h3>
+            <h4>{cuisines.join(',')}</h4>
+            <h4>{avgRating}star</h4>
+            <h4>RS.{priceOfTwo} FOR TWO</h4>
+            <h4>{deliveryTime}minutes</h4>  
 
         </div>
     );
 };
 
+ 
 const Body=()=>{
     return(
         <div className="body">
             <div className="Search">Search</div>
             <div className="res-container">
-                <RestaurantCard
-                resName="Meghana food"
-                cuisin="Biryani North indian"
-                star="4.3 stars"
-                time="34 minutes"
-                />
-                <RestaurantCard
-                resName="Burger"
-                cuisin="South indian food"
-                star="5.3 stars"
-                time="23 minutes"
-                />
-                
+                {resList.map((restaurant)=>(
+                  <RestaurantCard key={restaurant.data.id} resdata={restaurant}/>
 
+
+                ))}
+                
             </div>
         </div>
-    )
-}
+    );
+};
 
 
 const AppLayout=()=>{

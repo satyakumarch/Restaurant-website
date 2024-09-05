@@ -18,4 +18,5 @@ Tree shaking algorithm=remove unused code
 npx parcel  Build index.html
 
 /node_modules 
-.parcel-cache
+/dist
+/.parcel-cache
