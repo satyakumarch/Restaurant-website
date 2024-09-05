@@ -1,0 +1,21 @@
+#namaste react
+
+#parcel
+Dev Build 
+local server
+HMR=hot module replacement
+file watching algorithm =written in C++
+caching faster Build
+image optimization
+magnification
+bundling
+compress your file
+code spliting
+differential bundling -=support older browser
+Tree shaking algorithm=remove unused code
+
+
+npx parcel  Build index.html
+
+/node_modules 
+.parcel-cache
