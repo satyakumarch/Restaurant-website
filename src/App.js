@@ -2,143 +2,306 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-
-const Header =()=>{
-    return(
-    <div className="header">
-        <div className="logo-container">
-       
-            <img className="logo"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWTurMbiF0EWvudfRdha7BdBjT441rYD_W4Q&s"/>
-        </div>
-         <div className="nav-items">
-           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact us</li>
-            <li>cart</li>
-           </ul>
-
-         </div>
-
-    </div>
-        
-    );
-};
+import Header from "./components/Header.js";
+import Body from "./components/Body.js";
+   
 
 
 const styleCard={
     BackgroundColor:"yellow", 
 };
 
-
-const resList={
-    
-        "restaurants": [
+const resList=[
+  {
+    "info": {
+      "id": "671928",
+      "name": "KFC",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/510f05e2-a9e7-49fe-8ab3-ea8c2eb8a5ae_671928.JPG",
+      "locality": "7th Block",
+      "areaName": "Koramangla",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Burgers",
+        "Fast Food",
+        "Rolls & Wraps"
+      ],
+      "avgRating": 4.3,
+      "parentId": "547",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "2.8K+",
+      "sla": {
+        "deliveryTime": 24,
+        "lastMileTravel": 1.2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "1.2 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-07 02:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "20% OFF",
+        "subHeader": "UPTO ₹50"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      },
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "--"
+        }
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/city/bangalore/kfc-7th-block-koramangla-rest671928",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "426776",
+      "name": "Theobroma",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/22/059c1c9b-6e04-475a-8aba-1cba2e61953f_426776.jpg",
+      "locality": "7th Block",
+      "areaName": "Koramangala",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Desserts",
+        "Bakery",
+        "Beverages"
+      ],
+      "avgRating": 4.7,
+      "parentId": "1040",
+      "avgRatingString": "4.7",
+      "totalRatingsString": "5.2K+",
+      "sla": {
+        "deliveryTime": 29,
+        "lastMileTravel": 2.4,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "2.4 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-06 23:00:00",
+        "opened": true
+      },
+      "badges": {
+        "imageBadges": [
           {
-            "id": "93741",
-            "name": "Subway",
-            "locality": "The Nexus Mall",
-            "image": "https://cloudinary.com/images/vendor/2024/8/2/877b99a7-fdcc-40c6-a19a-684a746243aa_93741.jpg",
-            "avgRating": "4.6",
-            "totalRatings": "2.7K+",
-            "delivery": {
-              "time": "20-25 mins",
-              "lastMileTravel": "1.3 km"
-            },
-            "availability": {
-              "isOpen": true,
-              "nextCloseTime": "2024-09-06 00:00:00"
-            },
-            "badges": {
-              "gourmet": true,
-              "pureVeg": true
-            },
-            "discount": {
-              "header": "₹150 OFF",
-              "subHeader": "ABOVE ₹299",
-              "discountTag": "FLAT DEAL"
-            },
-            "externalRatings": {
-              "source": "Google",
-              "rating": "3.4",
-              "ratingCount": "95"
-            },
-            "links": {
-              "cta": "https://www.swiggy.com/city/bangalore/cheesecake-and-co-koramangala-rest534235"
-            }
+            "imageId": "Green%20Dot%20Awards/Best%20In%20Desserts.png",
+            "description": "Delivery!"
           },
           {
-            "id": "671928",
-            "name": "KFC",
-            "locality": "7th Block, Koramangala",
-            "image": "https://cloudinary.com/images/vendor/2024/4/17/510f05e2-a9e7-49fe-8ab3-ea8c2eb8a5ae_671928.JPG",
-            "avgRating": "4.3",
-            "totalRatings": "2.8K+",
-            "delivery": {
-              "time": "30-35 mins",
-              "lastMileTravel": "1.2 km"
-            },
-            "availability": {
-              "isOpen": true,
-              "nextCloseTime": "2024-09-06 02:00:00"
-            },
-            "discount": {
-              "header": "ITEMS",
-              "subHeader": "AT ₹179"
-            },
-            "links": {
-              "cta": "https://www.swiggy.com/city/bangalore/kfc-7th-block-koramangala-rest671928"
-            }
+            "imageId": "Rxawards/_CATEGORY-Desserts.png",
+            "description": "Delivery!"
           },
           {
-            "id": "10576",
-            "name": "Pizza Hut",
-            "locality": "6th Block, Koramangala",
-            "image": "https://cloudinary.com/images/vendor/2024/7/16/87e56c63-b521-4257-96ae-a42229b92009_10576.jpg",
-            "avgRating": "4.2",
-            "totalRatings": "20K+",
-            "delivery": {
-              "time": "30-35 mins",
-              "lastMileTravel": "0.9 km"
-            },
-            "availability": {
-              "isOpen": true,
-              "nextCloseTime": "2024-09-06 04:00:00"
-            },
-            "discount": {
-              "header": "ITEMS",
-              "subHeader": "AT ₹199"
-            },
-            "externalRatings": {
-              "source": "Google",
-              "rating": "4.4",
-              "ratingCount": "2.0K+"
-            },
-            "links": {
-              "cta": "https://www.swiggy.com/city/bangalore/pizza-hut-6th-block-koramangala-rest10576"
-            }
+            "imageId": "newg.png",
+            "description": "Gourmet"
           }
         ]
-      }
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "description": "Delivery!",
+                  "imageId": "Green%20Dot%20Awards/Best%20In%20Desserts.png"
+                }
+              },
+              {
+                "attributes": {
+                  "description": "Delivery!",
+                  "imageId": "Rxawards/_CATEGORY-Desserts.png"
+                }
+              },
+              {
+                "attributes": {
+                  "description": "Gourmet",
+                  "imageId": "newg.png"
+                }
+              }
+            ]
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "ITEMS",
+        "subHeader": "AT ₹99"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      },
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "--"
+        }
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
       
-
-const Body=()=>{
-    return(
-        <div className="body">
-            <div className="Search">Search</div>
-            <div className="res-container">
-                {resList.map((restaurant )=>(
-                  <restaurant   key={restaurant.data.id} resdata={restaurant}/>
-
-                ))}
-                
-            </div>
-        </div>
-    );
-};
-
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/city/bangalore/theobroma-7th-block-koramangala-rest426776",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "10576",
+      "name": "Pizza Hut",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/87e56c63-b521-4257-96ae-a42229b92009_10576.jpg",
+      "locality": "6th Block",
+      "areaName": "Koramangala",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Pizzas"
+      ],
+      "avgRating": 4.2,
+      "parentId": "721",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "20K+",
+      "sla": {
+        "deliveryTime": 24,
+        "lastMileTravel": 0.9,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "0.9 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-07 04:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "ITEMS",
+        "subHeader": "AT ₹189"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      },
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "4.4",
+          "ratingCount": "2.0K+"
+        },
+        "source": "GOOGLE",
+        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/city/bangalore/pizza-hut-6th-block-koramangala-rest10576",
+      "type": "WEBLINK"
+    }
+  }
+        ]
+      
 
 const AppLayout=()=>{
     return(
@@ -148,6 +311,5 @@ const AppLayout=()=>{
         </div>
     );
 };
-
 const root=ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout/>); 

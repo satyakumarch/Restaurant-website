@@ -22,7 +22,6 @@
     margin: 5px;
     padding: 3px;
     width: 280px;
-    height: 430px;
 }
 .res-card:hover{
     cursor: pointer;
@@ -43,4 +42,9 @@
 .resta-logo{
   width: 100%;  
   height: 50%;
+}
+.filter-btn{
+    font-size:30px ;
+    margin: 20px;
+    cursor: pointer;
 }
