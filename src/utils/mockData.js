@@ -115,8 +115,8 @@ const resList=[
                         "Rajasthani",
                         "Maharashtrian",
                         "Snacks",
-                        "Desserts",
-                        "Beverages"
+                        
+                        
                       ],
                       "avgRating": 4.3,
                       "parentId": "301197",
@@ -218,7 +218,7 @@ const resList=[
                         "Snacks",
                         "Turkish",
                         "Portuguese",
-                        "Continental"
+                        
                       ],
                       "avgRating": 4.5,
                       "parentId": "371281",
@@ -1779,4 +1779,4 @@ const resList=[
                        }
                 }
                 ];
-                export default resList;
+export default resList;

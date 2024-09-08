@@ -44,7 +44,14 @@
   height: 50%;
 }
 .filter-btn{
-    font-size:30px ;
+    font-size:20px ;
     margin: 20px;
+    padding: 10;
     cursor: pointer;
+    background-color: rgb(155, 206, 206);
+    border-radius: 5px;
+
+}
+.filter-btn:hover{
+    border: 1px solid black;
 }
