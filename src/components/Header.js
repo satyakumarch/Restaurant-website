@@ -1,5 +1,18 @@
 import {LOGO_URL} from "../utils/constants";
 import { useState,useEffect } from "react";
+
+
+// if no dependencies array=>useeffect called every render
+//if useEffect is calld empty=[]=> useEffect is called on initital rendering(just once);
+//if dependencies array is btnNameReact=>Everytime btnNameReact is updated
+//if dependencies array is [btnNameReact,searchText]=>Everytime btnNameReact or searchText is updated
+
+//useState = is used to create a local state variable inside a functional components
+//useEffect = is used to perform side effects in a functional component
+//useEffect is called everytime the component is rendered
+//useEffect is called after the component is rendered
+
+
  
 const Header =()=>{
  const [btnNameReact,setBtnNameReact]=useState("Login");
@@ -10,7 +23,7 @@ const Header =()=>{
 //  });
 useEffect(()=>{
     console.log("useeffect called");
-});
+},[]);
 
 
 
