@@ -9,6 +9,7 @@ import restaurant from "./components/Restaurant.js";
 import  Contact from "./components/Contact.js";
 
 import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
+import Restaurant from "./components/Restaurant.js";
 
 
 const styleCard={
@@ -336,9 +337,10 @@ const appRouter=createBrowserRouter([
         element:<Contact/>
       },
       {
-        path:"/contact/Resid",
-        element:<restaurant/>
-      }
+        path:"/restaurant/:resId",
+        element:<Restaurant/>,
+       
+      },
      
     ],
     errorElement:<Error />,
