@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
+    background-color: antiquewhite;
 }
 .logo{
   width: 100px;  
@@ -12,11 +13,31 @@
     padding: 0px 20px;
     display: flex;
     list-style-type: none;
+    margin: 0;
+    background-color: rgb(153, 187, 217);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
 .nav-items >ul>li{
     padding: 10px;
     margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-items > ul > li:hover {
+    background-color: #007bff; /* Dynamic background color on hover */
+    color: white; /* Text color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.nav-items > ul > li > a {
+    text-decoration: none;
+    color: #343a40; /* Default text color */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.nav-items > ul > li > a:hover {
+    color: white; /* Text color on hover */
 }
 .res-card{
     margin: 5px;
