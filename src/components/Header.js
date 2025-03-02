@@ -1,6 +1,6 @@
-import {LOGO_URL} from "../utils/constants";
-import { useState,useEffect } from "react";
-import {Link} from "react-router-dom";
+import { LOGO_URL } from "../utils/constants";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 // if no dependencies array=>useeffect called every render
@@ -14,56 +14,56 @@ import {Link} from "react-router-dom";
 //useEffect is called after the component is rendered
 
 
- 
-const Header =()=>{
-  const [btnNameReact,setBtnNameReact]=useState("Login");
-  console.log("header rendered");
 
-  //  useEffect(()=>{
- //     console.log("useeffect called");
- //  });
- useEffect(()=>{
-    console.log("useeffect called");
- },[]);
- return(
-         <div className="header">
-                <div className="logo-container">
-       
-                   <img className="logo" src={LOGO_URL}/>
-              </div>
-              <div className="nav-items">
-                   <ul>
-                       <li>
-                             <Link to ="/">Home</Link>
-                        </li>
-                           
-                        
-              
-                        <li>
-                             <Link to ="/About">About</Link>
-                        </li>
-                        <li>
-                             <Link to="/contact">Contact us</Link>
-                        </li>
-            
-                          <li>Cart</li>
-                          <button 
+const Header = () => {
+     const [btnNameReact, setBtnNameReact] = useState("Login");
+     console.log("header rendered");
+
+     //  useEffect(()=>{
+     //     console.log("useeffect called");
+     //  });
+     useEffect(() => {
+          console.log("useeffect called");
+     }, []);
+     return (
+          <div className="header">
+               <div className="logo-container">
+                    <img className="logo" src={LOGO_URL} />
+               </div>
+               <div className="nav-items">
+                    <ul>
+                         <li>
+                              <Link to="/">Home</Link>
+                         </li>
+
+
+
+                         <li>
+                              <Link to="/About">About</Link>
+                         </li>
+                         <li>
+                              <Link to="/contact">Contact us</Link>
+                         </li>
+
+                         <li>Cart</li>
+                         <button
                               className="Login"
-                               onClick={()=>{ btnNameReact=="Login" ?
-                               setBtnNameReact("Logout") 
-                                 :
-                               setBtnNameReact("Login");
-                                  }}
-                                  >
-                                 {btnNameReact}
-                           </button>
-            
+                              onClick={() => {
+                                   btnNameReact == "Login" ?
+                                        setBtnNameReact("Logout")
+                                        :
+                                        setBtnNameReact("Login");
+                              }}
+                         >
+                              {btnNameReact}
+                         </button>
+
                     </ul>
 
-              </div>
+               </div>
 
-           </div>
-        
-        );
+          </div>
+
+     );
 };
 export default Header;
