@@ -6,17 +6,18 @@ import Body from "./components/Body.js";
 import About from "./components/About.js";
 import Error from "./components/Error.js";
 import restaurant from "./components/Restaurant.js";
-import  Contact from "./components/Contact.js";
+import Contact from "./components/Contact.js";
+import RestaurantMenu from "./components/ResturantMenu.js";
 
-import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Restaurant from "./components/Restaurant.js";
 
 
-const styleCard={
-    BackgroundColor:"yellow", 
+const styleCard = {
+  BackgroundColor: "yellow",
 };
 
-const resList=[
+const resList = [
   {
     "info": {
       "id": "671928",
@@ -47,20 +48,20 @@ const resList=[
         "opened": true
       },
       "badges": {
-        
+
       },
       "isOpen": true,
       "type": "F",
       "badgesV2": {
         "entityBadges": {
           "imageBased": {
-            
+
           },
           "textBased": {
-            
+
           },
           "textExtendedBadges": {
-            
+
           }
         }
       },
@@ -73,19 +74,19 @@ const resList=[
         "differentiatedUiMediaDetails": {
           "mediaType": "ADS_MEDIA_ENUM_IMAGE",
           "lottie": {
-            
+
           },
           "video": {
-            
+
           }
         }
       },
       "reviewsSummary": {
-        
+
       },
       "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       "restaurantOfferPresentationInfo": {
-        
+
       },
       "externalRatings": {
         "aggregatedRating": {
@@ -95,7 +96,7 @@ const resList=[
       "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
     },
     "analytics": {
-      
+
     },
     "cta": {
       "link": "https://www.swiggy.com/city/bangalore/kfc-7th-block-koramangla-rest671928",
@@ -174,10 +175,10 @@ const resList=[
             ]
           },
           "textBased": {
-            
+
           },
           "textExtendedBadges": {
-            
+
           }
         }
       },
@@ -190,19 +191,19 @@ const resList=[
         "differentiatedUiMediaDetails": {
           "mediaType": "ADS_MEDIA_ENUM_IMAGE",
           "lottie": {
-            
+
           },
           "video": {
-            
+
           }
         }
       },
       "reviewsSummary": {
-        
+
       },
       "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       "restaurantOfferPresentationInfo": {
-        
+
       },
       "externalRatings": {
         "aggregatedRating": {
@@ -212,7 +213,7 @@ const resList=[
       "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
     },
     "analytics": {
-      
+
     },
     "cta": {
       "link": "https://www.swiggy.com/city/bangalore/theobroma-7th-block-koramangala-rest426776",
@@ -247,20 +248,20 @@ const resList=[
         "opened": true
       },
       "badges": {
-        
+
       },
       "isOpen": true,
       "type": "F",
       "badgesV2": {
         "entityBadges": {
           "imageBased": {
-            
+
           },
           "textBased": {
-            
+
           },
           "textExtendedBadges": {
-            
+
           }
         }
       },
@@ -273,19 +274,19 @@ const resList=[
         "differentiatedUiMediaDetails": {
           "mediaType": "ADS_MEDIA_ENUM_IMAGE",
           "lottie": {
-            
+
           },
           "video": {
-            
+
           }
         }
       },
       "reviewsSummary": {
-        
+
       },
       "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
       "restaurantOfferPresentationInfo": {
-        
+
       },
       "externalRatings": {
         "aggregatedRating": {
@@ -298,55 +299,54 @@ const resList=[
       "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
     },
     "analytics": {
-      
+
     },
     "cta": {
       "link": "https://www.swiggy.com/city/bangalore/pizza-hut-6th-block-koramangala-rest10576",
       "type": "WEBLINK"
     }
   }
-        ]
-      
-        
-const AppLayout=()=>{
-    return(
-        <div className="app">
-            <Header/>
-            <Outlet/>
+]
 
-            {/* <Body/> */}
-        </div>
-    );
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Outlet />
+
+      {/* <Body/> */}
+    </div>
+  );
 };
 
-const appRouter=createBrowserRouter([
+const appRouter = createBrowserRouter([
   {
-    path:"/",
-    element:<AppLayout />,
-    children:[
+    path: "/",
+    element: <AppLayout />,
+    children: [
       {
-        path:"/",
-        element:<Body/>,
+        path: "/",
+        element: <Body />,
       },
       {
-        path:"/about",
-        element:<About/>,
+        path: "/about",
+        element: <About />,
       },
       {
-        path:"/contact",
-        element:<Contact/>
+        path: "/contact",
+        element: <Contact />
       },
       {
-        path:"/restaurant/:resId",
-        element:<Restaurant/>,
-       
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu />,
       },
-     
+
     ],
-    errorElement:<Error />,
+    errorElement: <Error />,
   },
-  
+
 
 ]);
-const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter}/>); 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={appRouter} />); 
