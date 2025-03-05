@@ -102,3 +102,57 @@
 .Search {
     display: flex;
 }
+/* resturant  menu */
+.restaurant-menu-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px; /* Adjust this value based on your navbar height */
+}
+
+.restaurant-header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.restaurant-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.restaurant-details {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+}
+
+.menu-items-container {
+    padding: 20px;
+}
+
+.menu-items-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-description {
+    color: #666;
+    font-size: 14px;
+}
