@@ -1,15 +1,26 @@
-import {useState, useEffect } from "react";
-import Shimmer from "./Shimmer";
-const RestaurantMenu = () => {
+import {useState, useEffect } from "react";//useEffect is a hook that allows you to perform side effects in your functional components
+import Shimmer from "./Shimmer";//Shimmer is a loading effect that is used to show the user that the data is being loaded
+import { useParams } from "react-router-dom";//useParams is a hook that allows you to access the URL parameters from a current route
+import { MENU_API } from "../utils/constants";//MENU_API is a constant that stores the URL of the API
+
+
+const RestaurantMenu = () => {//RestaurantMenu is a functional component
     const [resInfo,setResInfo]=useState(null);
 
-    useEffect(()=>{
-        fetchMenu();
+    const {resId}=useParams();//useParams is a hook that allows you to access the URL parameters from a current route
+
+    useEffect(()=>{//useEffect is a hook that allows you to perform side effects in your functional components
+        fetchMenu();//fetchMenu is a function that is called when the component is rendered
 
     },[]);
 
-    const  fetchMenu= async()=>{
-        const data=await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+    // const  fetchMenu= async()=>{
+        // const data=await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+        // const data=await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=${resId}`);
+        
+        const fetchMenu=async()=>{
+        const data=await fetch(MENU_API+resId);
+
         const json=await data.json();
         console.log(json);
         setResInfo(json.data); 
@@ -19,7 +30,7 @@ const RestaurantMenu = () => {
     
 
     const {name,cuisines,costForTwo}=
-    resInfo?.cards[0]?.card?.card?.info;
+    resInfo?.cards[2]?.card?.card?.info;
 
      const {itemCards}=
      resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
@@ -33,10 +44,12 @@ const RestaurantMenu = () => {
             </p>
             <h2>Menu</h2>
             <ul>
-                {itemCards.map(itemCards.card)}
-                <li>{itemCards[0].card.info.name}</li>
-                <li>{itemCards[1].card.info.name}</li>
-                <li>{itemCards[2].card.info.name}</li>
+                {itemCards.map((item)=>(
+                    <li key={item.card.info.id}>
+                        {item.card.info.name}-{"Rs."}
+                        {item.card.info.price/100} ||  {item.card.info.defaultPrice/100}
+                        </li>
+                ))}
             </ul>
         </div>
     )
